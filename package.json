@@ -1,0 +1,29 @@
+{
+  "name": "nma",
+  "description": "Notify My Android library with CLI goodness",
+  "version": "0.1.0",
+  "author": "Randall A. Gordon <randall@randallagordon.com> (http://randallagordon.com/)",
+  "homepage": "https://github.com/randallagordon/node-nma",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/randallagordon/node-nma.git"
+  },
+  "keywords": [
+    "notification",
+    "android",
+    "nma",
+    "utility"
+  ],
+  "main": "lib/nma.js",
+  "bin": {
+    "nma": "bin/nma"
+  },
+  "dependencies": {
+    "request": "*"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
