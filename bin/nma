@@ -1,8 +1,33 @@
 #!/usr/bin/env node
-var argv = process.argv.slice(2),
-    path = require('path'),
-    fs = require('fs'),
-    lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib/'), 
-    nma = require(lib + 'nma');
 
-nma.apply(null, argv);
+var program = require("commander")
+ ,  path = require("path")
+ ,  fs = require("fs")
+ ,  lib = path.join(path.dirname(fs.realpathSync(__filename)), "../lib/")
+ ,  notify = require(lib + "nma");
+
+program
+  .version( require("../package").version )
+  .option( "-k, --apikey <key>",
+    "API key(s)" )
+  .option( "-a, --application <app>",
+    "Name of the application generating the notification" )
+  .option( "-e, --event <event>",
+    "Subject of the notification" )
+  .option( "-d, --description <desc>",
+    "Full text of the notification" )
+  .option( "-p, --priority [0]",
+    "-2 = Very Low; -1 = Moderate; 0 = Normal; 1 = High; 2 = Emergency", Number,  0)
+  .option( "-u, --url <url>",
+    "URL/URI to associate with the notification" )
+  .option( "-c, --content-type [type]",
+    "Set to \"text/html\" and basic html will be rendered while displaying the notification", "text/html" )
+  .parse( process.argv );
+
+notify( program.apikey,
+        program.application,
+        program.event,
+        program.description,
+        program.priority,
+        program.url,
+        program.contentType );

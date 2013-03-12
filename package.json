@@ -19,6 +19,7 @@
     "nma": "bin/nma"
   },
   "dependencies": {
+    "commander": "*",
     "request": "*"
   },
   "devDependencies": {},
