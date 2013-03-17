@@ -8,6 +8,8 @@ var program = require("commander")
 
 program
   .version( require("../package").version )
+  .option( "-s, --silent",
+    "Silence output")
   .option( "-k, --apikey <key>",
     "API key(s)" )
   .option( "-a, --application <app>",
