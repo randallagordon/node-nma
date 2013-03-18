@@ -1,4 +1,4 @@
-# node-nma #####################################################################
+# node-nma &nbsp; [![build status](https://secure.travis-ci.org/randallagordon/node-nma.png)](http://travis-ci.org/randallagordon/node-nma)
 
 A Node.js library and CLI tool to send notifications via Notify My Android 
 
