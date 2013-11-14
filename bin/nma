@@ -25,6 +25,8 @@ program
     "Set to \"text/html\" and basic html will be rendered while displaying the notification", "text/html" )
   .parse( process.argv );
 
+if (!program.args.length) program.help()
+
 notify( program.apikey,
         program.application,
         program.event,
