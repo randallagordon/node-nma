@@ -3,8 +3,7 @@
 var program = require("commander")
  ,  path = require("path")
  ,  fs = require("fs")
- ,  lib = path.join(path.dirname(fs.realpathSync(__filename)), "../lib/")
- ,  notify = require(lib + "nma");
+ ,  notify = require("../lib/nma");
 
 program
   .version( require("../package").version )
@@ -25,6 +24,8 @@ program
   .option( "-c, --content-type [type]",
     "Set to \"text/html\" and basic html will be rendered while displaying the notification", "text/html" )
   .parse( process.argv );
+
+if (!program.args.length) program.help()
 
 notify( program.apikey,
         program.application,
