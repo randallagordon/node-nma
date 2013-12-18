@@ -23,7 +23,7 @@ program
     "Set to \"text/html\" and basic html will be rendered while displaying the notification", "text/html" )
   .parse( process.argv );
 
-if ( !process.argv.length ) {
+if ( process.argv.length <= 2 ) {
   program.help();
 } else {
   notify( program.apikey,
