@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-var program = require("commander")
- ,  path = require("path")
- ,  fs = require("fs")
- ,  notify = require("../lib/nma");
+var program = require("commander"), 
+    notify = require("../lib/nma");
 
 program
   .version( require("../package").version )
@@ -25,12 +23,15 @@ program
     "Set to \"text/html\" and basic html will be rendered while displaying the notification", "text/html" )
   .parse( process.argv );
 
-if (!program.args.length) program.help()
+if ( !process.argv.length ) {
+  program.help();
+} else {
+  notify( program.apikey,
+          program.application,
+          program.event,
+          program.description,
+          program.priority,
+          program.url,
+          program.contentType );
+}
 
-notify( program.apikey,
-        program.application,
-        program.event,
-        program.description,
-        program.priority,
-        program.url,
-        program.contentType );
