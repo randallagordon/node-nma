@@ -25,13 +25,13 @@
     "nma": "bin/nma"
   },
   "dependencies": {
-    "commander": "*",
-    "request": "*"
+    "commander": "~2.1.0",
+    "request": "~2.30.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "should": "*",
-    "coffee-script": "~1.6.3"
+    "coffee-script": "~1.6.3",
+    "mocha": "~1.15.1",
+    "should": "~2.1.1"
   },
   "optionalDependencies": {},
   "engines": {
