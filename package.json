@@ -5,10 +5,7 @@
   "homepage": "https://github.com/randallagordon/node-nma",
   "author": "Randall A. Gordon <randall@randallagordon.com> (http://randallagordon.com/)",
   "contributors": [
-    {
-      "name": "Jesse Keane",
-      "email": "<me@jessekeane.me>"
-    }
+    { "name": "Jesse Keane", "email": "<me@jessekeane.me>" }
   ],
   "repository": {
     "type": "git",
@@ -30,8 +27,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*",
-    "coffee-script": "*"
+    "should": "*"
   },
   "optionalDependencies": {},
   "engines": {
