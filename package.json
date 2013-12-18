@@ -30,7 +30,8 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "should": "*"
+    "should": "*",
+    "coffee-script": "~1.6.3"
   },
   "optionalDependencies": {},
   "engines": {
