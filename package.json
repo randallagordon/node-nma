@@ -1,11 +1,14 @@
 {
   "name": "nma",
   "description": "Notify My Android library with CLI goodness",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "homepage": "https://github.com/randallagordon/node-nma",
   "author": "Randall A. Gordon <randall@randallagordon.com> (http://randallagordon.com/)",
   "contributors": [
-    { "name": "Jesse Keane", "email": "<me@jessekeane.me>" }
+    {
+      "name": "Jesse Keane",
+      "email": "<me@jessekeane.me>"
+    }
   ],
   "repository": {
     "type": "git",
