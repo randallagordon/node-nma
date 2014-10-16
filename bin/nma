@@ -1,37 +1,44 @@
 #!/usr/bin/env node
+"use strict";
 
-var program = require("commander"), 
-    notify = require("../lib/nma");
+var program = require("commander");
+var notify = require("../lib/nma");
 
 program
-  .version( require("../package").version )
-  .option( "-s, --silent",
+  .version(require("../package").version)
+  .option("-s, --silent",
     "Silence output")
-  .option( "-k, --apikey <key>",
-    "API key(s)" )
-  .option( "-a, --application <app>",
-    "Name of the application generating the notification" )
-  .option( "-e, --event <event>",
-    "Subject of the notification" )
-  .option( "-d, --description <desc>",
-    "Full text of the notification" )
-  .option( "-p, --priority [0]",
+  .option("-k, --apikey <key>",
+    "API key(s), separated by commas")
+  .option("-a, --application <app>",
+    "Name of the application generating the notification")
+  .option("-e, --event <event>",
+    "Subject of the notification")
+  .option("-d, --description <desc>",
+    "Full text of the notification")
+  .option("-p, --priority [0]",
     "-2 = Very Low; -1 = Moderate; 0 = Normal; 1 = High; 2 = Emergency", Number,  0)
-  .option( "-u, --url <url>",
-    "URL/URI to associate with the notification" )
-  .option( "-c, --content-type [type]",
-    "Set to \"text/html\" and basic html will be rendered while displaying the notification", "text/html" )
-  .parse( process.argv );
+  .option("-u, --url <url>",
+    "URL/URI to associate with the notification")
+  .option("-c, --content-type [type]",
+    "Set to \"text/html\" and basic html will be rendered while displaying the notification", "text/html")
+  .parse(process.argv);
 
-if ( process.argv.length <= 2 ) {
+if (process.argv.length <= 2) {
   program.help();
 } else {
-  notify( program.apikey,
-          program.application,
-          program.event,
-          program.description,
-          program.priority,
-          program.url,
-          program.contentType );
+  notify({
+    "apikey": program.apikey,
+    "application": program.application,
+    "event": program.event,
+    "description": program.description,
+    "priority": program.priority,
+    "url": program.url,
+    "content-type": program.contentType
+  }, function (error) {
+    if (error) {
+      console.log(error);
+      process.exit(1);
+    }
+  });
 }
-

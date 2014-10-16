@@ -12,7 +12,7 @@ Follows the NMA API closely:
 
     $ nma -k apikey -a application -e event -d description -p priority -u url -c content-type
 
-Complete usage details via ''nma --help'
+Complete usage details via `nma --help`
 
     Usage: nma [options]
 
@@ -20,7 +20,7 @@ Complete usage details via ''nma --help'
 
       -h, --help                 output usage information
       -V, --version              output the version number
-      -k, --apikey <key>         API key(s)
+      -k, --apikey <key>         API key(s), separated by commas
       -a, --application <app>    Name of the application generating the notification
       -e, --event <event>        Subject of the notification
       -d, --description <desc>   Full text of the notification
@@ -32,12 +32,15 @@ Complete usage details via ''nma --help'
 
     var nma = require("nma");
 
-    nma( "02cfc1a5f4e567929c31c13953e1adef247118562f148f7a",
-         "Your App",
-         "An Event",
-         "And a description of that event...",
-         0, // Priority
-         "http://www.somewebsite.com/" );
+    nma({
+      "apikey": "02cfc1a5f4e567929c31c13953e1adef247118562f148f7a",
+      "application": "Your App",
+      "event": "An Event",
+      "description": "And a description of that event...",
+      "priority": 0, // Priority
+      "url": "http://www.somewebsite.com/",
+      "content-type": "text/plain"
+    }, callback);
 
 ### TODO
 
