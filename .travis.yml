@@ -1,4 +1,7 @@
 language: node_js
 node_js:
-  - 0.10
+- 0.1
 script: npm run ci
+notifications:
+  slack:
+    secure: g7R5Ta9uKBCPCmzKzGDxL7RnoM524jGAxegChbZtjT0Aysx3IWgD4t4NfRY11JfZ0A/GWy4PIPk2kpkn5e7l8J7sgqNBC0HFk551dC03DHFHBikaBtpvjwJ8C+wwvTlC4+nhOkQ6qNP/euDlIvQUZXOtRUEyuLawL/LvljeGFbU=
