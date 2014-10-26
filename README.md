@@ -1,4 +1,4 @@
-# node-nma &nbsp; [![npm version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Stories in Ready][waffle-image]][waffle-url]
+# node-nma &nbsp; [![npm version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] ![Dependency Status][david-image] [![Stories in Ready][waffle-image]][waffle-url]
 
 A Node.js library and CLI tool to send notifications via Notify My Android 
 
@@ -54,11 +54,12 @@ Complete usage details via `nma --help`
 
 MIT
 
-[npm-image]: http://img.shields.io/npm/v/npm.svg
-[npm-url]: https://npm.im/nma
+[npm-image]: http://img.shields.io/npm/v/nma.svg
+[npm-url]: http://npm.im/nma
 [travis-image]: https://secure.travis-ci.org/randallagordon/node-nma.png
 [travis-url]: http://travis-ci.org/randallagordon/node-nma
 [coveralls-image]: https://img.shields.io/coveralls/randallagordon/node-nma.svg
 [coveralls-url]: https://coveralls.io/r/randallagordon/node-nma
+[david-image]: https://david-dm.org/randallagordon/node-nma.png
 [waffle-image]: https://badge.waffle.io/randallagordon/node-nma.png?label=ready&title=Ready
 [waffle-url]: https://waffle.io/randallagordon/node-nma

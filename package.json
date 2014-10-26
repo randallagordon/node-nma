@@ -26,15 +26,16 @@
     "nma": "bin/nma"
   },
   "dependencies": {
-    "commander": "~2.1.0",
-    "request": "~2.30.0"
+    "commander": "^2.5.0",
+    "request": "^2.46.0"
   },
   "devDependencies": {
+    "chai": "^1.9.2",
     "coveralls": "^2.11.2",
     "hoek": "^2.6.0",
     "jscs": "^1.7.1",
     "jshint": "^2.5.6",
-    "lab": "^4.6.2",
+    "lab": "^5.0.1",
     "sinon": "^1.10.3"
   },
   "optionalDependencies": {},

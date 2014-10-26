@@ -2,13 +2,14 @@
 
 var Lab = require("lab");
 var lab = exports.lab = Lab.script();
+var chai = require("chai");
 
 var describe = lab.describe;
 var it = lab.it;
 //var before = lab.before;
 //var after = lab.after;
 //var expect = Lab.expect;
-var assert = Lab.assert;
+var assert = chai.assert;
 
 var Hoek = require("hoek");
 var sinon = require("sinon");
