@@ -3,6 +3,7 @@
   "description": "Notify My Android library with CLI goodness",
   "version": "0.2.0",
   "homepage": "https://github.com/randallagordon/node-nma",
+  "license": "MIT",
   "author": "Randall A. Gordon <randall@randallagordon.com> (http://randallagordon.com/)",
   "contributors": [
     {
@@ -29,10 +30,11 @@
     "request": "~2.30.0"
   },
   "devDependencies": {
-    "jshint": "^2.5.6",
-    "jscs": "^1.7.1",
-    "lab": "^4.6.2",
+    "coveralls": "^2.11.2",
     "hoek": "^2.6.0",
+    "jscs": "^1.7.1",
+    "jshint": "^2.5.6",
+    "lab": "^4.6.2",
     "sinon": "^1.10.3"
   },
   "optionalDependencies": {},
@@ -40,9 +42,10 @@
     "node": "*"
   },
   "scripts": {
-    "lint": "./node_modules/jshint/bin/jshint lib bin/nma test",
-    "style": "./node_modules/jscs/bin/jscs lib bin/nma test",
-    "test": "./node_modules/lab/bin/lab -c",
-    "ci": "npm run lint && npm run style && npm test"
+    "lint": "jshint lib bin/nma test",
+    "style": "jscs lib bin/nma test",
+    "test": "lab -t 100",
+    "test-coveralls": "npm test && lab -t 100 -r lcov | coveralls",
+    "ci": "npm run lint && npm run style && npm run test-coveralls"
   }
 }
