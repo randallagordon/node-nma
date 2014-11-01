@@ -4,11 +4,31 @@ A Node.js library and CLI tool to send notifications via Notify My Android
 
 [![npm Version][npm-image]][npm-url] [![npm Downloads][downloads-image]][downloads-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][david-image]][david-url] [![Documentation Status][rtd-image]][rtd-url] [![Open Issues][issues-image]][issues-url] [![Stories in Ready][waffle-image]][waffle-url]
 
-### Installation
+## Installation
 
-    $ [sudo] npm install -g nma
+If you want to use the CLI tool, Use the `-g` flag to install globally.
 
-### Usage
+    $ npm install [-g] nma
+
+## Code Example
+
+```javascript
+var nma = require("nma");
+
+nma({
+  "apikey": "02cfc1a5f4e567929c31c13953e1adef247118562f148f7a",
+  "application": "Your App",
+  "event": "An Event",
+  "description": "And a description of that event...",
+  "priority": 0, // Priority
+  "url": "http://www.somewebsite.com/",
+  "content-type": "text/plain"
+}, callback);
+```
+
+Also, `apikey` can be a list of comma separated keys if you're using multiple keys.
+
+## CLI Usage
 
 Follows the NMA API closely:
 
@@ -16,43 +36,30 @@ Follows the NMA API closely:
 
 Complete usage details via `nma --help`
 
-    Usage: nma [options]
+```sh
+Usage: nma [options]
 
-    Options:
+Options:
 
-      -h, --help                 output usage information
-      -V, --version              output the version number
-      -k, --apikey <key>         API key(s), separated by commas
-      -a, --application <app>    Name of the application generating the notification
-      -e, --event <event>        Subject of the notification
-      -d, --description <desc>   Full text of the notification
-      -p, --priority [0]         -2 = Very Low; -1 = Moderate; 0 = Normal; 1 = High; 2 = Emergency
-      -u, --url <url>            URL/URI to associate with the notification
-      -c, --content-type [type]  Set to "text/html" and basic html will be rendered while displaying the notification
+  -h, --help                 output usage information
+  -V, --version              output the version number
+  -k, --apikey <key>         API key(s), separated by commas
+  -a, --application <app>    Name of the application generating the notification
+  -e, --event <event>        Subject of the notification
+  -d, --description <desc>   Full text of the notification
+  -p, --priority [0]         -2 = Very Low; -1 = Moderate; 0 = Normal; 1 = High; 2 = Emergency
+  -u, --url <url>            URL/URI to associate with the notification
+  -c, --content-type [type]  Set to "text/html" and basic html will be rendered while displaying the notification
+```
 
-### Code Example
+## TODO
 
-    var nma = require("nma");
-
-    nma({
-      "apikey": "02cfc1a5f4e567929c31c13953e1adef247118562f148f7a",
-      "application": "Your App",
-      "event": "An Event",
-      "description": "And a description of that event...",
-      "priority": 0, // Priority
-      "url": "http://www.somewebsite.com/",
-      "content-type": "text/plain"
-    }, callback);
-
-### TODO
-
- - More intelligent CLI tool with input validation
+ - Input validation
  - Constructor to setup some defaults (apikey, application, content-type) 
- - Handle calls with multiple API keys
- - Silent and verbose output
+ - Verbose output
  - ??? - Feel free to open an Issue or submit a Pull Request!
 
-## License #####################################################################
+## License
 
 MIT
 
