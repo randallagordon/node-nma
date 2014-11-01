@@ -1,6 +1,8 @@
-# node-nma &nbsp; [![npm version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] ![Dependency Status][david-image] [![Stories in Ready][waffle-image]][waffle-url]
+# node-nma
 
 A Node.js library and CLI tool to send notifications via Notify My Android 
+
+[![npm Version][npm-image]][npm-url] [![npm Downloads][downloads-image]][downloads-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency Status][david-image]][david-url] [![Documentation Status][rtd-image]][rtd-url] [![Open Issues][issues-image]][issues-url] [![Stories in Ready][waffle-image]][waffle-url]
 
 ### Installation
 
@@ -56,10 +58,17 @@ MIT
 
 [npm-image]: http://img.shields.io/npm/v/nma.svg
 [npm-url]: http://npm.im/nma
+[downloads-image]: http://img.shields.io/npm/dm/nma.svg
+[downloads-url]: http://npm.im/nma
 [travis-image]: https://secure.travis-ci.org/randallagordon/node-nma.png
 [travis-url]: http://travis-ci.org/randallagordon/node-nma
 [coveralls-image]: https://img.shields.io/coveralls/randallagordon/node-nma.svg
 [coveralls-url]: https://coveralls.io/r/randallagordon/node-nma
 [david-image]: https://david-dm.org/randallagordon/node-nma.png
+[david-url]: https://david-dm.org/randallagordon/node-nma
+[rtd-image]: https://readthedocs.org/projects/node-nma/badge/?version=stable
+[rtd-url]: https://readthedocs.org/projects/node-nma/?badge=stable
+[issues-image]: http://img.shields.io/github/issues/randallagordon/node-nma.svg
+[issues-url]: https://github.com/randallagordon/node-nma/issues
 [waffle-image]: https://badge.waffle.io/randallagordon/node-nma.png?label=ready&title=Ready
 [waffle-url]: https://waffle.io/randallagordon/node-nma
